@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Select } from '@ngxs/store';
 import { FormState } from '../app.state';
 import { Observable } from 'rxjs';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
@@ -12,12 +12,19 @@ import { FormBuilder } from '@angular/forms';
 export class TestComponent {
 
   @Select(FormState) form$: Observable<any>;
-
-  constructor(private fb: FormBuilder) { }
-  form = this.fb.group({
-    'firstName': [''],
-    'lastName': [''],
-    'role': [''],
-    'notes': ['']
-  });
+  form: FormGroup;
+  roles: Array<string> = [
+    'Guest',
+    'Admin',
+    'Owner',
+    'Operator'
+  ];
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      'firstName': [''],
+      'lastName': [''],
+      'role': [''],
+      'notes': ['']
+    });
+  }
 }
