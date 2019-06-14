@@ -13,11 +13,11 @@ export class TestComponent {
 
   @Select(FormState) form$: Observable<any>;
 
-  form = this.fb.group({
-      name: ['' ],
-      email: ['']
-   });
-
   constructor(private fb: FormBuilder) { }
-
+  form = this.fb.group({
+    'firstName': [''],
+    'lastName': [''],
+    'role': [''],
+    'notes': ['']
+  });
 }
