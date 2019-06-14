@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class SampleComponent {
   @Select(FormState) form$: Observable<any>;
-  form: FormGroup;
+  sampleForm: FormGroup;
   roles: Array<string> = [
     'Guest',
     'Admin',
@@ -19,7 +19,7 @@ export class SampleComponent {
     'Operator'
   ];
   constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
+    this.sampleForm = this.fb.group({
       'firstName': [''],
       'lastName': [''],
       'role': [''],
