@@ -23,7 +23,7 @@ export class UserComponent {
     this.form = this.fb.group({
       'firstName': [''],
       'lastName': [''],
-      'role': [''],
+      'role': ['Admin'],
       'notes': ['']
     });
   }
