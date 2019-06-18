@@ -8,7 +8,7 @@ import {FormState} from './app.state';
 
 import { AppComponent } from './app.component';
 import { AppRouterModule } from './app-routing.module';
-import { TestComponent } from './test/test.component';
+import { UserComponent } from './user/user.component';
 import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { SampleComponent } from './sample/sample.component';
     NgxsModule.forRoot([FormState]),
     NgxsFormPluginModule.forRoot()
   ],
-  declarations: [AppComponent, TestComponent, SampleComponent],
+  declarations: [AppComponent, UserComponent, SampleComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
